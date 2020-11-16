@@ -1,4 +1,5 @@
 #include <iostream>
+
 void print(const char a[]){
 std::cout<<a<<"\n";
 }
@@ -22,12 +23,33 @@ void bublesort(int array[], int n){
 }
 }
 
+void arrayRevers (int array[], int len){
+	int a;
+	for(int i = 0; i <len; ++i){
+        	 len--;
+       		 a = array[i];
+       		 array[i] = array[len];
+       		 array[len] = a;
+}
+}
+void arrayAdding(int array[], int len, int len2){
+	
+	for(int i = 0; i < len2; ++i){
+		array[i] = len--;
+}
+
+}
+
 int main(){
-	const int n = 5;
-	int array[n]={5,4,3,2,1};
-	print("Hello World");
-	bublesort(array,5);
-	printArray(array,5);
-	print("Hello, Github");
+
+
+	int n;
+	std::cout<<"Give a Array lengh :  ";
+	std::cin>>n;
+	int array[n];
+	arrayAdding(array, n, n);
+	printArray(array, n);
+	arrayRevers(array, n);
+	printArray(array, n);
  return 0;
 }
